@@ -360,15 +360,15 @@
     <!-- Slide 5: Polaroid Moments -->
     <section class="slide">
       <div class="polaroid-wrapper">
-        <div class="card-title" style="margin-bottom: 20px;"><span class="badge">📷</span> Moments <span id="photo-counter" style="font-size:0.85rem; color:var(--text-muted); margin-left:6px;">1/3</span></div>
+        <div class="card-title" style="margin-bottom: 20px;"><span class="badge">📷</span> Moments <span id="photo-counter" style="font-size:0.85rem; color:var(--text-muted); margin-left:6px;">1/13</span></div>
         <div class="polaroid-frame">
-          <img id="polaroid-image" class="polaroid-img" src="photo1.jpg" alt="Memory" />
+          <img id="polaroid-image" class="polaroid-img" src="4642.jpg" alt="Memory" />
         </div>
         <div class="polaroid-controls">
           <button class="polaroid-btn" onclick="changePhoto(-1)">‹</button>
           <button class="polaroid-btn" onclick="changePhoto(1)">›</button>
         </div>
-        <div class="date-badge" id="polaroid-date">DECEMBER 10, 2023</div>
+        <div class="date-badge" id="polaroid-date">March 22nd, 2025</div>
       </div>
     </section>
 
@@ -390,21 +390,21 @@
     }
 
     // Photo Carousel Data
-   const photos = [
-  { src: '4642.jpg', date: 'March 22nd, 2025' },
-  { src: '1756.jpg', date: 'May 7th, 2023' },
-  { src: '1835.jpg', date: 'May 7th, 2023' },
-  { src: '1811.jpg', date: 'May 7th, 2023' },
-  { src: '3163.jpg', date: 'December 8th, 2023' },
-  { src: '4314.jpg', date: 'January 6th, 2025, 2 Year anniversary' },
-  { src: '1829.jpg', date: 'May 7th, 2023' },
-  { src: '3150.jpg', date: 'December 8th, 2023' },
-  { src: '3151.jpg', date: 'December 8th, 2023' },
-  { src: '2028.jpg', date: 'August 3rd, 2023' },
-  { src: '3164.jpg', date: 'December 8th, 2023' },
-  { src: '4641.jpg', date: 'March 22nd, 2025' },
-  { src: '3144.jpg', date: 'December 8th, 2023' }
-];
+    const photos = [
+      { src: '4642.jpg', date: 'March 22nd, 2025' },
+      { src: '1756.jpg', date: 'May 7th, 2023' },
+      { src: '1835.jpg', date: 'May 7th, 2023' },
+      { src: '1811.jpg', date: 'May 7th, 2023' },
+      { src: '3163.jpg', date: 'December 8th, 2023' },
+      { src: '4314.jpg', date: 'January 6th, 2025, 2 Year anniversary' },
+      { src: '1829.jpg', date: 'May 7th, 2023' },
+      { src: '3150.jpg', date: 'December 8th, 2023' },
+      { src: '3151.jpg', date: 'December 8th, 2023' },
+      { src: '2028.jpg', date: 'August 3rd, 2023' },
+      { src: '3164.jpg', date: 'December 8th, 2023' },
+      { src: '4641.jpg', date: 'March 22nd, 2025' },
+      { src: '3144.jpg', date: 'December 8th, 2023' }
+    ];
     let currentPhotoIdx = 0;
 
     function changePhoto(step) {
@@ -417,6 +417,11 @@
       date.textContent = photos[currentPhotoIdx].date;
       counter.textContent = `${currentPhotoIdx + 1}/${photos.length}`;
     }
+
+    // Initialize the carousel immediately on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      changePhoto(0);
+    });
 
     // Typewriter Logic
     function typeText(element) {
@@ -462,4 +467,3 @@
   </script>
 </body>
 </html>
-
